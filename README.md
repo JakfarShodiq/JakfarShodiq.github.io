@@ -33,20 +33,13 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🌐 How to Deploy for Free (1-Minute Setup)
+## 🌐 Live Website
 
-### Deploy to GitHub Pages:
-1. Push this folder to a GitHub repository (e.g. `jakfar-portfolio`):
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: personal portfolio and recruiter dossier"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/jakfar-portfolio.git
-   git push -u origin main
-   ```
-2. In GitHub, go to **Settings** > **Pages** > Set source to **main branch** / root folder.
-3. Your site will be live at `https://<your-username>.github.io/jakfar-portfolio/`.
+Your personal portfolio is now live on GitHub Pages:
+👉 **[https://jakfarshodiq.github.io/JakfarPortofolio/](https://jakfarshodiq.github.io/JakfarPortofolio/)**
+
+Repository:
+👉 **[https://github.com/JakfarShodiq/JakfarPortofolio](https://github.com/JakfarShodiq/JakfarPortofolio)**
 
 ### Deploy to Vercel or Netlify:
 - Simply drag and drop this folder into [app.netlify.com/drop](https://app.netlify.com/drop) or import the repository in [vercel.com](https://vercel.com).
