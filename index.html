@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhamad Jakfar Shodiq | Engineering Leader & Principal Mobile Engineer</title>
+  <meta name="description" content="Portfolio of Muhamad Jakfar Shodiq — Engineering Leader & Principal Mobile Engineer with 13+ years of experience in high-scale mobile platforms, fintech, OTT streaming, and team management.">
+  <meta name="author" content="Muhamad Jakfar Shodiq">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            },
+            dark: {
+              bg: '#0a0f1d',
+              card: '#111827',
+              border: '#1f293d',
+              subtle: '#172033',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Menlo', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Subtle background grid */
+    .bg-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    .light .bg-grid {
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    }
+    /* Print Styles */
+    @media print {
+      body { background: white !important; color: black !important; }
+      .no-print { display: none !important; }
+      .print-only { display: block !important; }
+      .card { border: 1px solid #ddd !important; box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#0a0f1d] text-slate-200 transition-colors duration-300 min-h-screen selection:bg-emerald-500 selection:text-white">
+
+  <!-- BACKGROUND DECORATIONS -->
+  <div class="fixed inset-0 bg-grid pointer-events-none z-0"></div>
+  <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
+  <div class="fixed bottom-0 right-0 w-[500px] h-[300px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none z-0"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-50 backdrop-blur-xl bg-[#0a0f1d]/80 border-b border-slate-800/80 no-print">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="#overview" class="flex items-center gap-3 group">
+          <img src="assets/images/jakfar.png" alt="Muhamad Jakfar Shodiq" class="w-9 h-9 rounded-full object-cover ring-2 ring-emerald-500/50 group-hover:ring-emerald-400 transition">
+          <div>
+            <span class="font-bold text-white tracking-tight block text-sm sm:text-base leading-tight">M. Jakfar Shodiq</span>
+            <span class="text-xs text-emerald-400 font-medium">Engineering Leader</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#overview" class="hover:text-emerald-400 transition">Overview</a>
+        <a href="#apps" class="hover:text-emerald-400 transition">Featured Apps</a>
+        <a href="#recruiter-brief" class="hover:text-emerald-400 transition flex items-center gap-1.5 text-emerald-400 font-semibold">
+          <i data-lucide="sparkles" class="w-4 h-4"></i> Recruiter Brief
+        </a>
+        <a href="#experience" class="hover:text-emerald-400 transition">Experience</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Tech Arsenal</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="openModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/20 transition">
+          <i data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i> Copy for Docs
+        </button>
+        <a href="assets/Muhamad_Jakfar_Shodiq_CV.pdf" download class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-800 text-slate-200 hover:bg-slate-700 border border-slate-700 transition">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i> Resume PDF
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="pt-4 sm:pt-8">
+      <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 sm:gap-12">
+        <div class="flex-1 space-y-5 text-center lg:text-left">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open to Engineering Management & Principal Mobile Roles
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Muhamad Jakfar Shodiq
+          </h1>
+
+          <p class="text-lg sm:text-xl font-medium text-slate-300 leading-snug">
+            <span class="text-emerald-400 font-semibold">Engineering Leader</span> & <span class="text-blue-400 font-semibold">Principal Mobile Architect</span>
+          </p>
+
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Over <strong>13 years of tech leadership (2012–Present)</strong> architecting tier-1 mobile platforms and leading multi-disciplinary squads across FinTech, OTT Media, and Construction Tech. Specialized in scaling mobile teams, modular architectures, CI/CD automation, and translating product vision into high-impact customer experiences.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <button onclick="openModal()" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm shadow-lg shadow-emerald-500/20 transition transform hover:-translate-y-0.5">
+              <i data-lucide="file-text" class="w-4 h-4"></i>
+              Copy Recruiter Summary (Docs)
+            </button>
+            <a href="#apps" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm transition">
+              <i data-lucide="layers" class="w-4 h-4 text-emerald-400"></i>
+              View 5 Live Apps
+            </a>
+            <a href="mailto:mjakfars@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-slate-200 font-semibold text-sm transition">
+              <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+              Email Me
+            </a>
+          </div>
+
+          <!-- Contact Quick Strip -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-5 pt-3 text-xs text-slate-400">
+            <a href="mailto:mjakfars@gmail.com" class="flex items-center gap-1.5 hover:text-emerald-400 transition">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i> mjakfars@gmail.com
+            </a>
+            <a href="https://wa.me/6285334930940" target="_blank" class="flex items-center gap-1.5 hover:text-emerald-400 transition">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i> +62 853-3493-0940
+            </a>
+            <a href="https://linkedin.com/in/muhamad-jakfar-shodiq" target="_blank" class="flex items-center gap-1.5 hover:text-emerald-400 transition">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5"></i> LinkedIn Profile
+            </a>
+            <span class="flex items-center gap-1.5">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Jakarta, Indonesia
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Profile Avatar Card -->
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+          <div class="relative bg-slate-900 border border-slate-800 p-3 rounded-2xl shadow-2xl">
+            <img src="assets/images/jakfar.png" alt="Muhamad Jakfar Shodiq" class="w-48 h-56 sm:w-60 sm:h-64 object-cover object-center rounded-xl shadow-inner">
+            <div class="mt-3 text-center">
+              <p class="text-xs font-semibold text-slate-300">13+ Years in Tech</p>
+              <p class="text-[11px] text-slate-500">Ex-Gravel • LinkAja • RCTI+ • Gramedia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEY METRICS BANNER -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl text-center backdrop-blur">
+          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">13+ Years</p>
+          <p class="text-xs font-medium text-slate-400 mt-1">Full-Cycle Engineering</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl text-center backdrop-blur">
+          <p class="text-2xl sm:text-3xl font-extrabold text-blue-400">15+ Members</p>
+          <p class="text-xs font-medium text-slate-400 mt-1">Cross-Functional Squads Led</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl text-center backdrop-blur">
+          <p class="text-2xl sm:text-3xl font-extrabold text-purple-400">5 Flagships</p>
+          <p class="text-xs font-medium text-slate-400 mt-1">Tier-1 Live App Store Apps</p>
+        </div>
+        <div class="bg-slate-900/60 border border-slate-800/80 p-4 rounded-xl text-center backdrop-blur">
+          <p class="text-2xl sm:text-3xl font-extrabold text-amber-400">Days → Mins</p>
+          <p class="text-xs font-medium text-slate-400 mt-1">CI/CD Release Velocity</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: RECRUITER 60-SECOND BRIEF -->
+    <section id="recruiter-brief" class="scroll-mt-20">
+      <div class="relative bg-gradient-to-b from-slate-900 via-slate-900/90 to-slate-950 border border-emerald-500/30 rounded-2xl p-6 sm:p-8 shadow-xl">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Recruiter 60-Second Dossier</h2>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Designed for quick recruiter evaluation & hiring manager reviews.</p>
+          </div>
+          <button onclick="openModal()" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 font-semibold text-xs transition">
+            <i data-lucide="copy" class="w-4 h-4"></i> Copy Summary for Google Docs
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6">
+          <div class="space-y-2">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold flex items-center gap-1.5">
+              <i data-lucide="users" class="w-4 h-4"></i> Leadership & Management
+            </h3>
+            <ul class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+              <li>• Managed teams of up to <strong>15 engineers & designers</strong> (iOS, Android, Web, QA, UI/UX).</li>
+              <li>• Promoted to Lead Software Engineer at Gravel within <strong>8 months</strong>.</li>
+              <li>• Spearheaded <strong>Release Train cadence</strong> & cross-squad dependency management.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-blue-400 font-semibold flex items-center gap-1.5">
+              <i data-lucide="cpu" class="w-4 h-4"></i> Architecture & Scale
+            </h3>
+            <ul class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+              <li>• Architected <strong>LinkAja</strong> modular iOS architecture from legacy monolith.</li>
+              <li>• Built <strong>RCTI+</strong> streaming engine to <strong>#3 on App Store</strong> Entertainment.</li>
+              <li>• Built company-wide <strong>Mobile Design System</strong> accelerating UI velocity by 40%+.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-xs font-mono uppercase tracking-wider text-purple-400 font-semibold flex items-center gap-1.5">
+              <i data-lucide="gauge" class="w-4 h-4"></i> DevOps & Business Impact
+            </h3>
+            <ul class="text-xs sm:text-sm text-slate-300 space-y-2 leading-relaxed">
+              <li>• Engineered CI/CD pipeline from scratch, cutting release time from <strong>3–4 days to minutes</strong>.</li>
+              <li>• Drove data-driven <strong>A/B testing (GrowthBook)</strong> & internal analytics telemetry.</li>
+              <li>• 13+ years continuous progression from Enterprise Data ETL to Executive Tech Lead.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: FEATURED LIVE APPS -->
+    <section id="apps" class="scroll-mt-20 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-2">
+            <i data-lucide="smartphone" class="w-7 h-7 text-emerald-400"></i>
+            Production Apps & Portfolio
+          </h2>
+          <p class="text-sm text-slate-400 mt-1">Applications built, architected, and scaled in production with verified App Store links.</p>
+        </div>
+        <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 w-fit">
+          5 Flagships Featured
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- APP 1: GRAVEL -->
+        <div class="group bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                G
+              </div>
+              <span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                Construction Tech
+              </span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mt-4 group-hover:text-emerald-400 transition">Gravel Superapp</h3>
+            <p class="text-xs font-mono text-slate-400">Lead Software Engineer / EM (2022–2024)</p>
+            
+            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              Indonesia's pioneering construction technology ecosystem connecting property owners, contractors, and specialized trade workers.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-400">
+              <p>• Managed 15 engineers & designers (iOS, Android, Web, QA, UX).</p>
+              <p>• Built Mobile App Design System & Release Train automation.</p>
+              <p>• Spearheaded GrowthBook A/B testing infrastructure.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500">Swift • Kotlin • GrowthBook</span>
+            <a href="https://apps.apple.com/id/app/gravel/id1586769860" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              App Store <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- APP 2: LINKAJA -->
+        <div class="group bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-rose-700 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                L
+              </div>
+              <span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-red-500/10 text-red-400 border border-red-500/20">
+                FinTech & Payments
+              </span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mt-4 group-hover:text-emerald-400 transition">LinkAja & LinkAja Syariah</h3>
+            <p class="text-xs font-mono text-slate-400">Lead Mobile Engineer Core Infra (2020–2022)</p>
+            
+            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              National tier-1 digital wallet powering millions of cashless transactions, public transportation, and utility payments.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-400">
+              <p>• Led Squad Core Infra (13 mobile engineers).</p>
+              <p>• Built end-to-end CI/CD reducing release cycle from 3-4 days to minutes.</p>
+              <p>• Refactored monolith to modular iOS framework architecture.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500">Swift • Modular • Bitrise CI</span>
+            <a href="https://apps.apple.com/id/app/linkaja-linkaja-syariah/id984436451" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              App Store <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- APP 3: RCTI+ -->
+        <div class="group bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                R+
+              </div>
+              <span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                OTT & Streaming
+              </span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mt-4 group-hover:text-emerald-400 transition">RCTI+ Superapp</h3>
+            <p class="text-xs font-mono text-slate-400">Senior iOS Engineer (2019)</p>
+            
+            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              MNC Media's streaming superapp featuring live TV broadcast, VOD, radio, audiobooks, and interactive news.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-400">
+              <p>• Built 0-to-1 iOS streaming client and custom media player.</p>
+              <p>• Reached <strong>#3 on App Store Entertainment Category</strong>.</p>
+              <p>• Official App Store featured app.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500">Swift • AVFoundation • HLS</span>
+            <a href="https://apps.apple.com/us/app/rcti-superapp/id1472168599" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              App Store <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- APP 4: GRAMEDIA E-COMMERCE -->
+        <div class="group bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-700 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                G
+              </div>
+              <span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                E-Commerce
+              </span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mt-4 group-hover:text-emerald-400 transition">Gramedia Mobile</h3>
+            <p class="text-xs font-mono text-slate-400">Senior iOS Engineer (2017–2019)</p>
+            
+            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              Omnichannel commerce application for Indonesia's largest retail bookstore chain and publishing network.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-400">
+              <p>• Built Gramedia e-commerce app from scratch in Swift & Obj-C.</p>
+              <p>• Integrated catalog browsing, payment gateway, and store pickup.</p>
+              <p>• Led multiple mobile client delivery initiatives.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500">Swift • Objective-C • E-Commerce</span>
+            <a href="https://apps.apple.com/id/app/gramedia/id1422591223" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              App Store <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- APP 5: GRAMEDIA DIGITAL & E-PERPUS -->
+        <div class="group bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                GD
+              </div>
+              <span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                Digital Publishing
+              </span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mt-4 group-hover:text-emerald-400 transition">Gramedia Digital & ePerpus</h3>
+            <p class="text-xs font-mono text-slate-400">Senior iOS Engineer & SCOOP Alum</p>
+            
+            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              Flagship e-book reader and white-label digital library solutions powering hundreds of schools, universities, and enterprise clients.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-400">
+              <p>• Engineered white-label digital libraries for B2B institutions.</p>
+              <p>• Optimized e-reader rendering engine & DRM offline storage.</p>
+              <p>• Maintained SCOOP magazine reader app.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500">Swift • PDF Engine • DRM</span>
+            <a href="https://apps.apple.com/id/app/gramedia-digital/id402166944" target="_blank" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300">
+              App Store <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- APP 6: DENS TV & BIG DATA CONSULTING -->
+        <div class="group bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition duration-300 flex flex-col justify-between shadow-lg">
+          <div>
+            <div class="flex items-start justify-between">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-600 to-blue-800 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                D
+              </div>
+              <span class="px-2 py-0.5 text-[11px] font-semibold rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                IPTV & Big Data
+              </span>
+            </div>
+            
+            <h3 class="text-lg font-bold text-white mt-4 group-hover:text-emerald-400 transition">Dens TV+ & Enterprise ETL</h3>
+            <p class="text-xs font-mono text-slate-400">Dens TV / PT Dua Empat Tujuh (2012–2016)</p>
+            
+            <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+              IPTV native streaming client & backend REST APIs, preceded by massive telco ETL pipelines for Telkomsel Data Warehouse.
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-400">
+              <p>• Native Dens TV+ video player UX and backend REST APIs.</p>
+              <p>• Managed Hadoop / Cloudera & Python ETL for Telkomsel.</p>
+              <p>• Strong foundation in systems programming & data pipelines.</p>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between">
+            <span class="text-[11px] font-mono text-slate-500">Python • Hadoop • Objective-C</span>
+            <span class="text-xs text-slate-500 font-mono">Enterprise Foundation</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: PROFESSIONAL EXPERIENCE TIMELINE -->
+    <section id="experience" class="scroll-mt-20 space-y-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-2">
+          <i data-lucide="briefcase" class="w-7 h-7 text-emerald-400"></i>
+          Professional Experience
+        </h2>
+        <p class="text-sm text-slate-400 mt-1">A chronologically proven track record of engineering leadership, scaling teams, and technical delivery.</p>
+      </div>
+
+      <div class="space-y-6 relative before:absolute before:inset-0 before:left-3 sm:before:left-4 before:w-0.5 before:bg-slate-800">
+
+        <!-- 1. GRAVEL -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. Gravel Teknologi Indonesia</h3>
+                <p class="text-xs text-slate-400">Construction technology ecosystem transforming project management and labor deployment</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 w-fit">
+                Aug 2022 – Oct 2024
+              </span>
+            </div>
+
+            <!-- Role 1 -->
+            <div class="mt-4 pt-4 border-t border-slate-800">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <h4 class="text-sm font-semibold text-emerald-300">Lead Software Engineer / Engineering Manager</h4>
+                <span class="text-xs font-mono text-slate-400">Jan 2023 – Oct 2024</span>
+              </div>
+              <ul class="mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• Managed a cross-functional department of <strong>15 professionals</strong>: 5 iOS engineers, 4 Android engineers, 2 Web engineers, 2 QA analysts, and 2 Product Designers.</li>
+                <li>• Spearheaded company-wide <strong>Mobile App Design System</strong>, enabling rapid UI component reuse and expediting feature time-to-market.</li>
+                <li>• Created an automated <strong>Release Train workflow</strong> for multi-squad feature deployments without release blockages.</li>
+                <li>• Drove data-informed product roadmaps and <strong>GrowthBook A/B testing</strong> to continuously validate feature hypotheses.</li>
+                <li>• Communicated product strategy, metrics, and technical risks directly to executive stakeholders.</li>
+              </ul>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="mt-4 pt-3 border-t border-slate-800/60">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <h4 class="text-sm font-semibold text-slate-200">Lead iOS Engineer</h4>
+                <span class="text-xs font-mono text-slate-400">Aug 2022 – Mar 2023</span>
+              </div>
+              <ul class="mt-1.5 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• <strong>Promoted within 8 months</strong> to Lead Software Engineer following strong technical leadership and architecture execution.</li>
+                <li>• Refactored legacy architecture to <strong>MVVM</strong> to standardize code maintainability and team collaboration.</li>
+                <li>• Engineered an internal analytics wrapper library to decouple third-party tracking dependencies.</li>
+                <li>• Established strict Git-flow standards and PR code review rubrics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. LINKAJA -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-blue-500 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. Fintek Karya Nusantara (LinkAja)</h3>
+                <p class="text-xs text-slate-400">State-backed national digital payment and FinTech platform</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 w-fit">
+                Jan 2020 – Jul 2022
+              </span>
+            </div>
+
+            <!-- Role 1 -->
+            <div class="mt-4 pt-4 border-t border-slate-800">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <h4 class="text-sm font-semibold text-blue-300">Lead Mobile Engineer — Squad Core Infra</h4>
+                <span class="text-xs font-mono text-slate-400">Dec 2021 – Jul 2022</span>
+              </div>
+              <ul class="mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• Led Squad Core Infra (13 mobile engineers: 2 Android, 11 iOS) ensuring platform reliability and developer velocity.</li>
+                <li>• Partnered with Product and SDET leads to orchestrate safe, synchronized app store releases.</li>
+                <li>• Developed internal developer CLI tools that accelerated builds and local testing cycles.</li>
+              </ul>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="mt-4 pt-3 border-t border-slate-800/60">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <h4 class="text-sm font-semibold text-slate-200">Lead iOS Engineer</h4>
+                <span class="text-xs font-mono text-slate-400">Jan 2020 – Nov 2021</span>
+              </div>
+              <ul class="mt-1.5 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• Architected and migrated LinkAja to a <strong>modular iOS framework architecture</strong>.</li>
+                <li>• Implemented end-to-end <strong>CI/CD pipeline workflow</strong> (PR validation, linting, unit tests, export) from scratch—reducing cycle time from <strong>3–4 days to minutes</strong>.</li>
+                <li>• Built design system components and instituted test coverage benchmarks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. MNC GROUP / RCTI+ -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-purple-500 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. MNC Investama Tbk (MNC Group)</h3>
+                <p class="text-xs text-slate-400">Leading Indonesian media and entertainment conglomerate</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 w-fit">
+                Mar 2019 – Dec 2019
+              </span>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800">
+              <h4 class="text-sm font-semibold text-purple-300">Senior iOS Engineer</h4>
+              <ul class="mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• Built 0-to-1 iOS OTT streaming application for <strong>RCTI+</strong>.</li>
+                <li>• Directed iOS development team, coordinating between internal developers and vendor partners.</li>
+                <li>• Developed and customized internal video player library with low-latency adaptive streaming.</li>
+                <li>• App earned official Apple App Store feature and ranked in <strong>Top 3 in Entertainment Category</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. GRAMEDIA -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-teal-500 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. Gramedia Digital Nusantara (Kompas Gramedia Group)</h3>
+                <p class="text-xs text-slate-400">Digital powerhouse of Indonesia's largest book & media conglomerate</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-teal-500/10 text-teal-400 border border-teal-500/20 w-fit">
+                Jan 2017 – Mar 2019
+              </span>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800">
+              <h4 class="text-sm font-semibold text-teal-300">Senior iOS Engineer</h4>
+              <ul class="mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• Engineered the primary <strong>Gramedia E-Commerce mobile application from scratch</strong> using Swift and Objective-C.</li>
+                <li>• Led multiple mobile client delivery projects and established cross-squad development standards.</li>
+                <li>• Developed multiple <strong>ePerpus (digital library)</strong> applications customized for institutions across Indonesia.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. APPS FOUNDRY (SCOOP) -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-indigo-500 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. Aplikasi Prima Persada (Apps Foundry)</h3>
+                <p class="text-xs text-slate-400">Digital publishing and digital magazine reader platform (SCOOP)</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 w-fit">
+                Apr 2016 – Jan 2017
+              </span>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800">
+              <h4 class="text-sm font-semibold text-indigo-300">iOS Engineer</h4>
+              <ul class="mt-2 text-xs sm:text-sm text-slate-300 space-y-1.5 leading-relaxed">
+                <li>• Improved and maintained SCOOP, the premier Indonesian digital newsstand app.</li>
+                <li>• Built white-label B2B e-Library applications for enterprise clients.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. DENS TV -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-cyan-500 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. Digdaya Duta Digital (Dens TV – CBN Group)</h3>
+                <p class="text-xs text-slate-400">Interactive digital IPTV & OTT video streaming provider</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 w-fit">
+                Aug 2014 – Apr 2016
+              </span>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800 space-y-3">
+              <div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-semibold text-cyan-300">iOS Engineer</span>
+                  <span class="font-mono text-slate-500">Nov 2015 – Apr 2016</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">• Built Dens TV+ native iOS client with custom live TV player and schedule UX.</p>
+              </div>
+              <div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-semibold text-cyan-300">Software Engineer</span>
+                  <span class="font-mono text-slate-500">Aug 2014 – Nov 2015</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">• Developed RESTful APIs and backend services powering streaming catalogs using Scrum.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. PT DUA EMPAT TUJUH -->
+        <div class="relative pl-8 sm:pl-10 group">
+          <div class="absolute left-1.5 sm:left-2.5 top-1.5 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-[#0a0f1d]"></div>
+          <div class="bg-slate-900/70 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <h3 class="text-lg font-bold text-white">PT. Dua Empat Tujuh (Solusi247)</h3>
+                <p class="text-xs text-slate-400">Big Data analytics, telecommunications, and enterprise consulting</p>
+              </div>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 text-slate-400 border border-slate-700 w-fit">
+                Jun 2012 – Aug 2014
+              </span>
+            </div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800 space-y-3">
+              <div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-semibold text-slate-300">Senior IT Consultant</span>
+                  <span class="font-mono text-slate-500">Jun 2013 – Aug 2014</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">• Managed Telkomsel Data Warehouse & Business Intelligence ETL with Python, CoSort, and Hadoop Cloudera.</p>
+              </div>
+              <div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="font-semibold text-slate-300">IT Consultant</span>
+                  <span class="font-mono text-slate-500">Jun 2012 – Jun 2013</span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">• Operated enterprise ETL tools on Solaris OS and Oracle Database.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TECH ARSENAL & SKILLS MATRIX -->
+    <section id="skills" class="scroll-mt-20 space-y-6">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center gap-2">
+          <i data-lucide="terminal" class="w-7 h-7 text-emerald-400"></i>
+          Technical Arsenal & Competencies
+        </h2>
+        <p class="text-sm text-slate-400 mt-1">Battle-tested technical and leadership proficiencies gathered over 13+ years.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Pillar 1: Mobile Engineering -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <i data-lucide="smartphone" class="w-5 h-5"></i>
+            <h3 class="font-bold text-white text-sm">Mobile Architecture</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Swift</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">SwiftUI</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Objective-C</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Kotlin</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">React Native</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Flutter</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">MVVM / Clean Arch</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Design Systems</span>
+          </div>
+        </div>
+
+        <!-- Pillar 2: DevOps & Platform -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-blue-400">
+            <i data-lucide="git-branch" class="w-5 h-5"></i>
+            <h3 class="font-bold text-white text-sm">DevOps & Release</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Bitrise CI</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">GitLab CI/CD</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Fastlane</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Release Train</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Git-Flow</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Unit Testing / PR Gates</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">GCP</span>
+          </div>
+        </div>
+
+        <!-- Pillar 3: Product & Analytics -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-purple-400">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+            <h3 class="font-bold text-white text-sm">Product & Experimentation</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">GrowthBook (A/B)</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Mixpanel</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Figma</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Jira / Agile</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Scrum Sprint Cadence</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Telemetry Wrappers</span>
+          </div>
+        </div>
+
+        <!-- Pillar 4: Backend & Data -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-amber-400">
+            <i data-lucide="database" class="w-5 h-5"></i>
+            <h3 class="font-bold text-white text-sm">Backend & Data</h3>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-1">
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Python</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Go</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">PHP</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">PostgreSQL</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">SQLite / Realm</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">MySQL / Oracle</span>
+            <span class="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Hadoop / ETL</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: EDUCATION & CERTIFICATIONS -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Education -->
+      <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-6">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-emerald-400"></i> Education
+        </h3>
+        <div class="mt-4 space-y-4">
+          <div>
+            <div class="flex justify-between items-baseline">
+              <h4 class="text-sm font-semibold text-slate-200">Mercubuana University, Jakarta</h4>
+              <span class="text-xs font-mono text-slate-500">2013 – 2017</span>
+            </div>
+            <p class="text-xs text-slate-400">Bachelor's Degree in Information Systems</p>
+          </div>
+          <div class="pt-3 border-t border-slate-800/80">
+            <div class="flex justify-between items-baseline">
+              <h4 class="text-sm font-semibold text-slate-200">Telkom School, Malang</h4>
+              <span class="text-xs font-mono text-slate-500">2009 – 2012</span>
+            </div>
+            <p class="text-xs text-slate-400">Software Engineering Vocational Diploma</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications & Languages -->
+      <div class="bg-slate-900/70 border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i data-lucide="award" class="w-5 h-5 text-blue-400"></i> Certifications & Languages
+          </h3>
+          <div class="mt-4 space-y-3">
+            <div class="p-3 bg-slate-800/60 rounded-lg border border-slate-700/60 flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0"></i>
+              <div>
+                <p class="text-xs font-semibold text-slate-200">Certified Mobile Developer (iOS & Android)</p>
+                <p class="text-[11px] text-slate-400">Brainmatics Professional Training</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
+          <span>Languages:</span>
+          <span class="font-medium text-slate-200">English (Professional) • Indonesian (Native)</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION: CONTACT & CONNECT -->
+    <section id="contact" class="scroll-mt-20">
+      <div class="bg-gradient-to-r from-emerald-950/40 via-slate-900 to-blue-950/40 border border-slate-800 rounded-2xl p-8 text-center max-w-3xl mx-auto shadow-2xl">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Let's Connect</h2>
+        <p class="text-slate-400 text-sm mt-2 max-w-lg mx-auto">
+          Currently exploring Engineering Management, Lead Software Engineer, and Principal Mobile opportunities.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-6">
+          <a href="mailto:mjakfars@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-sm shadow-lg shadow-emerald-500/20 transition">
+            <i data-lucide="mail" class="w-4 h-4"></i> mjakfars@gmail.com
+          </a>
+          <a href="https://wa.me/6285334930940" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm transition">
+            <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i> WhatsApp Chat
+          </a>
+          <a href="https://linkedin.com/in/muhamad-jakfar-shodiq" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold text-sm transition">
+            <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i> LinkedIn Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 py-8 text-center text-xs text-slate-500 no-print">
+    <p>© 2026 Muhamad Jakfar Shodiq. All rights reserved.</p>
+    <p class="mt-1">Crafted for recruiters & engineering teams seeking impact at scale.</p>
+  </footer>
+
+  <!-- MODAL: COPY RECRUITER SUMMARY FOR DOCS -->
+  <div id="recruiterModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
+        <div class="flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-emerald-400"></i>
+          <h3 class="font-bold text-white text-base">Recruiter & Docs Executive Summary</h3>
+        </div>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Text preview) -->
+      <div class="p-6 overflow-y-auto space-y-4 font-mono text-xs text-slate-300 leading-relaxed bg-[#0b101e]">
+        <textarea id="summaryText" class="w-full h-80 bg-slate-950/80 border border-slate-800 rounded-lg p-4 text-slate-200 font-mono text-xs focus:ring-1 focus:ring-emerald-500 outline-none resize-none leading-relaxed" readonly>
+# Muhamad Jakfar Shodiq — Recruiter & Hiring Manager Dossier
+Target Roles: Engineering Manager | Lead Software Engineer | Principal Mobile Engineer
+Location: Jakarta, Indonesia (Open to Hybrid & Remote)
+Contact: mjakfars@gmail.com | +62 853-3493-0940 | LinkedIn: Muhamad Jakfar Shodiq
+
+EXECUTIVE PROFILE:
+Versatile Engineering Leader and Principal Mobile Engineer with 13+ years of end-to-end technology experience (2012–Present), specializing in architecting high-scale consumer mobile applications and leading multi-disciplinary engineering organizations.
+
+CORE HIGHLIGHTS & SCALE:
+• People Leadership: Managed cross-functional squads of 15+ engineers and designers (iOS, Android, Web, QA, UI/UX). Promoted within 8 months to Lead Software Engineer at Gravel.
+• Tier-1 Indonesian Scale: Built and scaled platforms including LinkAja (national digital wallet), RCTI+ (Top 3 Entertainment on App Store), Gravel (construction tech superapp), and Gramedia (e-commerce & nationwide e-library).
+• Velocity & CI/CD: Cut release cycles from 3–4 days to under 15 minutes via automated Bitrise/GitLab CI/CD; engineered mobile design systems and release train flows across multiple squads.
+• Product Strategy: Championed GrowthBook A/B testing and telemetry analytics to align technical execution with user retention and business KPIs.
+
+FLAGSHIP APPLICATIONS (LIVE ON APP STORE):
+1. Gravel (Construction Tech): https://apps.apple.com/id/app/gravel/id1586769860
+2. LinkAja & LinkAja Syariah (FinTech Wallet): https://apps.apple.com/id/app/linkaja-linkaja-syariah/id984436451
+3. RCTI+ Superapp (Top 3 OTT Streaming): https://apps.apple.com/us/app/rcti-superapp/id1472168599
+4. Gramedia (E-Commerce): https://apps.apple.com/id/app/gramedia/id1422591223
+5. Gramedia Digital & ePerpus (Reading & Libraries): https://apps.apple.com/id/app/gramedia-digital/id402166944
+
+TECHNICAL ARSENAL:
+• Mobile: Swift, SwiftUI, Objective-C, Kotlin, React Native, Flutter, Modular & Clean Architecture
+• DevOps & Quality: CI/CD (Bitrise, GitLab CI), Fastlane, Release Train, Unit Testing, SPM
+• Product & Data: GrowthBook (A/B Testing), Mixpanel, Jira, Python, Go, PHP, PostgreSQL, Hadoop ETL
+• Education: B.S. Information Systems (Mercubuana University) | Software Engineering (Telkom School Malang)
+        </textarea>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 border-t border-slate-800 bg-slate-950/50 flex flex-wrap items-center justify-between gap-3">
+        <span class="text-xs text-slate-400">Ready to paste into Google Docs, Notion, or LinkedIn messages.</span>
+        <div class="flex items-center gap-2">
+          <button onclick="closeModal()" class="px-4 py-2 text-xs font-semibold text-slate-300 hover:text-white rounded-lg hover:bg-slate-800 transition">
+            Close
+          </button>
+          <button id="copyBtn" onclick="copySummary()" class="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white transition shadow-lg shadow-emerald-500/20">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span id="copyBtnText">Copy to Clipboard</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-emerald-600 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 text-sm font-semibold transition transform duration-300">
+    <i data-lucide="check-circle" class="w-4 h-4"></i>
+    <span>Recruiter summary copied to clipboard!</span>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Modal Handlers
+    function openModal() {
+      const modal = document.getElementById('recruiterModal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('recruiterModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Close on outside click
+    window.addEventListener('click', function(e) {
+      const modal = document.getElementById('recruiterModal');
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Copy to Clipboard
+    function copySummary() {
+      const text = document.getElementById('summaryText').value;
+      navigator.clipboard.writeText(text).then(() => {
+        const btnText = document.getElementById('copyBtnText');
+        const origText = btnText.innerText;
+        btnText.innerText = 'Copied!';
+        
+        // Show Toast
+        const toast = document.getElementById('toast');
+        toast.classList.remove('hidden');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          btnText.innerText = origText;
+        }, 3000);
+      });
+    }
+  </script>
+</body>
+</html>
