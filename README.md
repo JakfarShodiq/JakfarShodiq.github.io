@@ -35,11 +35,11 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🌐 Live Website
 
-Your personal portfolio is now live on GitHub Pages:
-👉 **[https://jakfarshodiq.github.io/JakfarPortofolio/](https://jakfarshodiq.github.io/JakfarPortofolio/)**
+Your personal portfolio is now live on GitHub Pages (Root Home):
+👉 **[https://jakfarshodiq.github.io/](https://jakfarshodiq.github.io/)**
 
 Repository:
-👉 **[https://github.com/JakfarShodiq/JakfarPortofolio](https://github.com/JakfarShodiq/JakfarPortofolio)**
+👉 **[https://github.com/JakfarShodiq/JakfarShodiq.github.io](https://github.com/JakfarShodiq/JakfarShodiq.github.io)**
 
 ### Deploy to Vercel or Netlify:
 - Simply drag and drop this folder into [app.netlify.com/drop](https://app.netlify.com/drop) or import the repository in [vercel.com](https://vercel.com).
